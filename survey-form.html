@@ -1,0 +1,149 @@
+<style type="text/css">
+    html, body{
+        background: gray;
+        font-family: Arial, sans-serif;
+        text-align: center !important;
+    }
+    html{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .main-container{
+        min-height: 70vh;
+        height: auto;
+        margin-top: 6vh;
+        margin-bottom: 6vh;
+        width: 40vw;
+    }
+    .title-section{
+        background: snow;
+        padding: 2px 5px;
+        border-bottom: 1px solid gray;
+        line-height: 5px;
+    }
+    #title{
+        letter-spacing: -1px;
+        transform: scale(1.1);
+    }
+    .form-container{
+        background-color: snow;
+        padding: 10px 25px;
+        text-align: left;
+        display: flex;
+    }
+    input, select, textarea{
+        padding: 10px;
+    }
+    .input-group{
+        margin-bottom: 10px;
+    }
+    .input-group label{
+        font-size: 1.1rem;
+    }
+    .input-group input[type='text'], .input-group input[type='email'], .input-group input[type='number'], select, textarea{
+        width: 100%;
+    }
+    textarea{
+        min-height: 15vh;
+        height: auto;
+    }
+    button{
+        width: 100%;
+        padding: 12px;
+        background-color: antiquewhite;
+        border: 1px solid dimgray;
+    }
+</style>
+
+<main class="main-container">
+    <section class="title-section">
+        <h1 id="title">
+            Healer404 Survey Form
+        </h1>
+        <p id="description">
+            Thank you very much for your support
+        </p>
+    </section>
+
+    <section class="form-container">
+        <form action="" id="survey-form">
+            <div class="input-group">
+                <label for="name" id="name-label">Name</label>
+                <input type="text" name="name" id="name" placeholder="Please enter your name..." required>
+            </div>
+            <div class="input-group">
+                <label for="email" id="email-label">Email</label>
+                <input type="email" name="email" id="email" placeholder="Please enter your email..." required>
+            </div>
+            <div class="input-group">
+                <label for="number" id="number-label">Age</label>
+                <input type="number" name="number" id="number" min="18" max="110" placeholder="Age (Optional)">
+            </div>
+            <div class="input-group">
+                <p>Please choose what describe you.</p>
+                <select name="status" id="dropdown" required>
+                    <option value="" disabled selected>
+                        Please choose...
+                    </option>
+                    <option value="full-work">Full-Time Worker</option>
+                    <option value="part-work">Part-Time Worker</option>
+                    <option value="not-work">Not Working</option>
+                    <option value="not-work">Student</option>
+                    <option value="others">Others</option>
+                    <option value="secret">Prefer not to say</option>
+                </select>
+            </div>
+
+            <fieldset class="input-group">
+                <legend>Gender</legend>
+                <label><input type="radio" name="gender" value="male" checked>Male</label>
+                <label><input type="radio" name="gender" value="female" checked>Female</label>
+                <label><input type="radio" name="gender" value="others" checked>Others</label>
+            </fieldset>
+
+            <fieldset class="input-group">
+                <legend>What are the gadgets you <em>personally</em> own? (Check all that apply)</legend>
+                <label>
+                    <input type="checkbox" name="owned_gadgets" value="desktop">
+                    Desktop
+                </label>
+                <label>
+                    <input type="checkbox" name="owned_gadgets" value="laptop">
+                    Laptop
+                </label>
+                <label>
+                    <input type="checkbox" name="owned_gadgets" value="tablet">
+                    Tablet
+                </label>
+                <label>
+                    <input type="checkbox" name="owned_gadgets" value="smartphone">
+                    Smartphone
+                </label>
+                <br>
+                <label>
+                    <input type="checkbox" name="owned_gadgets" value="mobile_phone">
+                    Mobile Phone
+                </label>
+                <label>
+                    <input type="checkbox" name="owned_gadgets" value="smartwatch">
+                    Smartwatch
+                </label>
+                <label>
+                    <input type="checkbox" name="owned_gadgets" value="None">
+                    None
+                </label>
+            </fieldset>
+
+            <div class="input-group">
+                <p>What is your impression on technologies nowadays?</p>
+                <textarea name="comment" id="comment" placeholder="Please enter your opinion..."></textarea>
+            </div>
+
+            <div class="input-group">
+                <button type="submit" id="submit">Submit</button>
+            </div>
+
+        </form>
+    </section>
+</main>

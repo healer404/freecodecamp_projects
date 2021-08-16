@@ -1,0 +1,198 @@
+<html>
+<head>
+    <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+            integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+            crossorigin="anonymous"
+    />
+    <style>
+        *{
+            margin: 0;
+            scroll-behavior: smooth;
+        }
+        html, body{
+            background-color: rgba(173, 216, 263, 0.4);
+            font-family: Arial, SansSerif;
+        }
+        #header{
+            position: fixed;
+            top: 0;
+            width: 100vw;
+            min-height: 10vh;
+            height: auto;
+            text-align: center;
+            background-color: snow;
+        }
+        .header-logo{
+            margin: 10px 0 0 0;
+        }
+        #header-img{
+            height: 8vh;
+        }
+
+        /*mobile*/
+        @media only screen and (max-width: 46.875em){
+            .header-logo{
+                width: 100% !important;
+            }
+            #header-img{
+                height: 5vh !important;
+            }
+        }
+
+        #id-navbar{
+            background-color: deepskyblue;
+            padding: 7px;
+            color: snow;
+            list-style: none;
+        }
+        li{
+            list-style: none;
+        }
+        .nav-link{
+            text-decoration: none;
+            color: snow;
+            font-size: 1rem;
+        }
+        .nav-link:hover, .nav-link:focus{
+            color: gray;
+        }
+        @media only screen and (max-width: 46.865em){
+            .nav-link{
+                font-size: 1.1rem !important;
+                display:flex;
+                flex-direction:column;
+            }
+            .m-hidden{
+                display: none;
+            }
+        }
+
+        main{
+            margin-top: 16vh;
+            min-height: 84vh;
+            height: auto;
+        }
+
+        @media only screen and (max-width: 46.875em){
+            main{
+                margin-top: 21vh;
+                min-height: 79vh;
+            }
+        }
+
+        .main-banner{
+            padding: 20vh 5vw 10vh 5vw;
+            display: flex;
+        }
+        .main-banner-text{
+            display: block;
+        }
+        .main-banner-text h2{
+            font-size: 4rem;
+            font-weight: 800;
+            letter-spacing: -2px;
+            line-height: 50px;
+        }
+        .main-banner-text h4{
+            font-size: 2rem;
+        }
+        iframe{
+            margin-left: 10px;
+        }
+        @media only screen and (max-width: 46.875em){
+            .main-banner-text{
+                text-align:left ;
+            }
+            .main-banner{
+                display: block;
+                text-align:center;
+            }
+            iframe{
+                margin: 5vh 0;
+            }
+        }
+        .newsletter-section{
+            height: 10vh;
+            padding: 2vh 3vw 0 3vw;
+            text-align:left;
+            background: aquamarine;
+        }
+        .input-group{
+            display:flex;
+        }
+        label{
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        input{
+            padding: 5px 9px;
+            background: snow;
+            width: 30vw;
+            border: 1px solid deepskyblue;
+        }
+        button{
+            padding: 5px 9px;
+            background: snow;
+            border: 1px solid deepskyblue;
+        }
+        @media only screen and (max-width: 46.875em){
+            input{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+<link
+        rel="stylesheet"
+        href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+        crossorigin="anonymous"
+/>
+
+<header id="header">
+    <div class="header-logo">
+        <img src="https://cdn.freecodecamp.org/testable-projects-fcc/images/product-landing-page-logo.png" alt="original trombones logo" id="header-img">
+    </div>
+
+    <nav id="id-navbar">
+        <ul>
+            <li>
+                <a href="#home" class="nav-link">Home</a> <span class='m-hidden'> | </span>
+                <a href="#started" class="nav-link">Let's Get Started</a>
+                <span class='m-hidden'> | </span>
+                <a href="#about" class="nav-link">About Us</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section class="main-banner">
+        <div class="main-banner-text">
+            <h2>MUSIC IS LIFE</h2>
+            <h4>Learn. Explore. Live.</h4>
+        </div>
+        <iframe
+                id="video"
+                height="315"
+                src="https://www.youtube-nocookie.com/embed/y8Yv4pnO7qc?rel=0&amp;controls=0&amp;showinfo=0"
+                frameborder="0"
+                allowfullscreen
+        ></iframe>
+    </section>
+
+    <section class="newsletter-section">
+        <form action=" https://www.freecodecamp.com/email-submit" id="form">
+            <label for="email">Apply for Newsletter</label>
+            <div class="input-group">
+                <input type="email" placeholder="Email" id="email" required>
+                <button type="submit" id="submit">Apply</button>
+            </div>
+        </form>
+    </section>
+</main>
+</body>
+</html>

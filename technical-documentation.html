@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    ul li{
+      list-style: none;
+    }
+    ol li{
+      padding-left: 10px;
+    }
+    a{
+      text-decoration: none;
+    }
+    .nav-item{
+      color: black;
+    }
+    .nav-item:hover{
+      transition: 300ms;
+      color: dimgray;
+    }
+    *{
+      scroll-behavior: smooth;
+      padding: 0;
+      margin: 0;
+      font-family: Roboto, sans-serif;
+    }
+    .container{
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+    }
+    @media only screen and (max-width: 46.875em){
+      .container{
+        display: block;
+        overflow: auto;
+      }
+    }
+    aside{
+      width: 18vw;
+      height: 100vh;
+      background: snow;
+    }
+    #navbar{
+      border-right: 1px solid gray ;
+      height: 100%;
+    }
+    #navbar header{
+      padding: 7px 5px;
+      font-size: 1.5rem;
+      font-weight: 500;
+    }
+    .nav-list{
+      list-style: none;
+    }
+    .nav-item{
+      border-bottom: 1px solid dimgray ;
+      padding: 12px 10px;
+      font-size: 1.1rem;
+    }
+    #main-doc{
+      background: snow;
+      width: 82vw;
+      padding: 10px;
+      height: 100%;
+      overflow: auto;
+    }
+    .main-section{
+      margin-bottom: 1.5vh;
+    }
+    .main-section header{
+      font-size: 1.8rem;
+      font-weight: 700;
+      border-bottom: 2px solid rgba(0,0,0,0.1);
+      padding-bottom: 5px;
+      margin-bottom: 2.5vh;
+    }
+    .main-section p{
+      font-size: 1.1rem;
+      line-height: 30px;
+      font-weight: 300;
+      margin-bottom: 2.2vh;
+    }
+    code{
+      display: inline;
+      margin: 5px;
+      background: lightblue;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <aside>
+      <nav id="navbar">
+        <header>
+          CSS Documentation
+        </header>
+        <hr>
+        <ul class="nav-list">
+          <a href="#introduction">
+            <li class="nav-item">
+              Introduction
+            </li>
+          </a>
+          <a href="#prerequisites">
+            <li class="nav-item">
+              Prerequisites
+            </li>
+          </a>
+          <a href="#css-basics">
+            <li class="nav-item">
+              CSS Basics
+            </li>
+          </a>
+          <a href="#css-tutorial">
+            <li class="nav-item">
+              CSS Tutorial
+            </li>
+          </a>
+          <a href="#other">
+            <li class="nav-item">
+              Other Examples
+            </li>
+          </a>
+          <a href="#references">
+            <li class="nav-item">
+              References
+            </li>
+          </a>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="main-doc">
+      <section class="main-section">
+        <header id="introduction">
+          Introduction
+        </header>
+        <p>
+          <strong>Cascading Style Sheets (CSS)</strong> is a stylesheet language used to describe the presentation of a document written in HTML or XML (including XML dialects such as SVG, MathML or XHTML). CSS describes how elements should be rendered on screen, on paper, in speech, or on other media.
+        </p>
+        <p>
+          CSS is among the core languages of the open web and is standardized across Web browsers according to W3C specifications. Previously, development of various parts of CSS specification was done synchronously, which allowed versioning of the latest recommendations. You might have heard about CSS1, CSS2.1, CSS3. However, CSS4 has never become an official version.
+        </p>
+        <p>
+          From CSS3, the scope of the specification increased significantly and the progress on different CSS modules started to differ so much, that it became more effective to develop and release recommendations separately per module. Instead of versioning the CSS specification, W3C now periodically takes a snapshot of the latest stable state of the CSS specification.
+        </p>
+      </section>
+
+      <section class="main-section">
+        <header id="prerequisites">
+          Prerequisites
+        </header>
+        <p>
+          You should learn the basics of HTML before attempting any CSS. We recommend that you work through our Introduction to HTML module first.
+        </p>
+
+        <p>
+          Once you understand the fundamentals of HTML, we recommend that you learn further HTML and CSS at the same time, moving back and forth between the two topics. This is because HTML is far more interesting and much more fun to learn when you apply CSS, and you can't really learn CSS without knowing HTML.
+        </p>
+
+        <p>
+          Before starting this topic, you should also be familiar with using computers and using the web passively (i.e., just looking at it, consuming the content). You should have a basic work environment set up as detailed in Installing basic software and understand how to create and manage files, as detailed in Dealing with files — both of which are parts of our Getting started with the web complete beginner's module.
+        </p>
+
+        <p>
+          It is also recommended that you work through Getting started with the web before proceeding with this topic, especially if you are completely new to web development. However, much of what is covered in its CSS basics article is also covered in our CSS first steps module, albeit in a lot more detail.
+        </p>
+      </section>
+
+      <section class="main-section">
+        <header id="css-basics">
+          CSS Basics
+        </header>
+        <p>
+          CSS (Cascading Style Sheets) is the code that styles web content. CSS basics walks through what you need to get started. We'll answer questions like: How do I make text red? How do I make content display at a certain location in the (webpage) layout? How do I decorate my webpage with background images and colors?
+        </p>
+      </section>
+
+      <section class="main-section">
+        <header id="css-tutorial">
+          CSS Tutorial
+        </header>
+        <p>
+          Like HTML, CSS is not a programming language. It's not a markup language either. CSS is a style sheet language. CSS is what you use to selectively style HTML elements. For example, this CSS selects paragraph text, setting the color to red:
+        </p>
+
+        <code>
+          p {
+          color: red;
+          }
+        </code>
+
+        <p>
+          Let's try it out! Using a text editor, paste the three lines of CSS (above) into a new file. Save the file as <em>style.css</em> in a directory named styles.
+        </p>
+        <p>
+          To make the code work, we still need to apply this CSS (above) to your HTML document. Otherwise, the styling won't change the appearance of the HTML.
+        </p>
+
+        <ol>
+          <li>
+            <p>1. Open your <em>index.html</em> file. Paste the following line in the head.</p>
+
+            <code>
+              <span><
+              link href="styles/style.css" rel="stylesheet"
+              ></span>
+            </code>
+          </li>
+          <li>
+            <p>2. Save <em>index.html</em> and load it in your browser. You should see something like this:</p>
+            <img src="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics/website-screenshot-styled.png" alt="Image">
+          </li>
+        </ol>
+      </section>
+
+      <section class="main-section">
+        <header id="other">Other Examples</header>
+        <ul>
+          <li>
+            <code>
+              p {
+              color: red;
+              width: 500px;
+              border: 1px solid black;
+              }
+            </code>
+          </li>
+          <li>
+            <code>
+              p, li, h1 {
+              color: red;
+              }
+            </code>
+          </li>
+          <li>
+            <code>
+              p, li, h1 {
+              color: red;
+              }
+            </code>
+          </li>
+        </ul>
+      </section>
+
+      <section class="main-section">
+        <header id="references">
+          References
+        </header>
+        <ul>
+          <li>https://developer.mozilla.org/en-US/docs/Web/CSS</li>
+          <li>https://developer.mozilla.org/en-US/docs/Learn/CSS</li>
+          <li>https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics</li>
+        </ul>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
